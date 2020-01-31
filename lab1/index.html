@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <m eta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -10,54 +10,84 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <title>Hello, world!</title>
+
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/42611a5285.js" crossorigin="anonymous"></script>
+
+    <title>Coca Cola Journey 3D App Template</title>
   </head>
   <body>
+    <!-- Logo and Nav bar-->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <!-- Brand -->
       <a class="navbar-brand" href="#">Coca Cola Journey</a>
-    
-      <!-- Links -->
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-    
-        <!-- Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            Drinks
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Coca Cola</a>
-            <a class="dropdown-item" href="#">Sprite</a>
-            <a class="dropdown-item" href="#">Dr Pepper</a>
-          </div>
-        </li>
-      </ul>
+
+      <!-- Collapsible NavBar Menu -->
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse ">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Link Menu item button to the links in navbar-->
+      <div class="collapse navbar-collapse">
+
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Drinks
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Coca Cola</a>
+              <a class="dropdown-item" href="#">Sprite</a>
+              <a class="dropdown-item" href="#">Dr Pepper</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <br>
-      
-    <div class="container">
-      <h3>Navbar With Dropdown</h3>
-      <p>This example adds a dropdown menu in the navbar.</p>
-    </div>
+    <br> <!-- Temporary Break -->
+    <!-- Main Body -->
     <div class="container-fluid">
-        <h1>Hello World!</h1>
-        <p>Resize the browser window to see the effect.</p>
-        <div class="row">
-          <div class="col-xs-12 col-sm-12" style="background-color:red;">.col-xs-12 col-sm-12 the background image will go here</div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12" style="background-color:red;">.col-xs-12 col-sm-12 the background image will go
+          here</div>
+
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4" style="background-color:lavenderblush;">.col-xs-12 col-sm-4 the coca cola image
+          will go here and the text will follow.</div>
+        <div class="col-xs-12 col-sm-4" style="background-color:lavender;">.col-xs-12 col-sm-4 the sprite image will go
+          here and the text can follow. filler text</div>
+        <div class="col-xs-12 col-sm-4" style="background-color:lightgrey;">.col-xs-12 col-sm-4 the dr pepper image can go
+          here and will have text to follow.</div>
+      </div>
+
+    </div>
+    
+    <br> <!-- Temporary Break -->
+    <!-- Footer for 3dApp -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <div class="navbar-text float-left copyright">
+            <p><span class="align-baseline"></span>&copy 2020 Mobile Web 3D Applications</p>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-4" style="background-color:lavenderblush;">.col-xs-12 col-sm-4 the coca cola image will go here and the text will follow.</div>
-          <div class="col-xs-12 col-sm-4" style="background-color:lavender;">.col-xs-12 col-sm-4 the sprite image will go here and the text can follow. filler text</div>
-          <div class="col-xs-12 col-sm-4" style="background-color:lightgrey;">.col-xs-12 col-sm-4 the dr pepper image can go here and will have text to follow.</div>
+        <div class="navbar-text float-right social">
+          <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
+          <a href="#"><i class="fab fa-github-square fa-2x"></i></a>
         </div>
       </div>
-            
+    </nav>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.4.1.js"></script>
