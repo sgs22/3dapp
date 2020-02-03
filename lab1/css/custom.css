@@ -1,0 +1,50 @@
+/* Method to declare your own fonts */
+@font-face {
+	font-family: cocaColaFont;
+	src: url(../assets/fonts/loki_cola/LOKICOLA.TTF);
+}
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in Bootstrap
+*/
+body {
+    padding-top: 30px;
+    padding-bottom: 5px;
+    background-color: rgba(182, 231, 243, 1.0);
+}
+.main_contents {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Some simple CSS rules for styling p, h1 to h6, etc. in the main content’s container */
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', sans-serif;
+	font-family: cocaColaFont;
+}
+/* Small devices (landscape phones, 576px and up)
+*/
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up)
+*/
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up)
+*/
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)
+*/
+@media (min-width: 1200px) {
+
+}
