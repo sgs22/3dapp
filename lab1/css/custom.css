@@ -1,8 +1,17 @@
 /* Method to declare your own fonts */
 @font-face {
 	font-family: cocaColaFont;
-	src: url(../assets/fonts/loki_cola/LOKICOLA.TTF);
+    src: url(../assets/fonts/loki_cola/LOKICOLA.TTF);
 }
+@font-face {
+    font-family: OpenSans;
+    src: url(../assets/fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: Oswald;
+    src: url(../assets/fonts/Oswald-Regular.ttf);
+}
+
 /* Extra small devices (portrait phones, less than 576px)
    No media query since this is the default in Bootstrap
 */
@@ -23,8 +32,46 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Oswald', sans-serif;
-	font-family: cocaColaFont;
+	/*font-family: cocaColaFont;*/
 }
+#main_3d_image {
+    background-image: url(../assets/images/main_3D.jpg); 
+    background-repeat: no-repeat;
+    height: 200px;
+}
+#main_text {
+    float: left;
+    margin: 5%;
+    width: 90%;
+    display: block;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+#main_text h2 {
+    color: rgba(0,102,153,1);
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+#main_text h3 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#main_text p {
+    font-size: 12px;
+    margin: 0px;
+    line-height: 1.2;
+} 
+.card {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(182, 231, 243, 1.0);
+ }
+
 /* Small devices (landscape phones, 576px and up)
 */
 @media (min-width: 576px) {
