@@ -13,9 +13,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <!-- X3DOM Package -->
-    <link rel='stylesheet' type='text/css' href='css/x3dom-v1.2.css'></link>
-    <link rel='stylesheet' type='text/javaScript' href="js/x3dom-v1.2.js"></link>
-    <link rel='stylesheet' type='text/swj' href="swj/x3dom-v1.2.swj"></link>
+    <link rel="stylesheet" type="text/css" href="css/x3dom.css"></link>
+    <link rel="stylesheet" type='text/javaScript' href="js/x3dom.js"></link>
+    <link rel='stylesheet' type='text/swj' href="swj/x3dom.swj"></link>
     <script type='text/javaScript' src="http://x3dom.org/x3dom/release/x3dom.js"></script>
     
     <!-- Font Awesome Kit -->
@@ -75,16 +75,36 @@
           </ul>
       </div>
     </nav>
-    <br> <!-- Temporary Break -->
+
     <!-- Main Body -->
-    <div class="container main_contents">
+    <div class="container-fluid main_contents">
+      <!-- Row to hold cards -->
       <div class="row"> 
-        <!-- Main 3D image -->
-        <div class="col-sm-12">
+        <!-- Column to hold x3d Model -->
+        <div class="col-sm-9">
+          <div class="card text-left">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="sprite.html">Sprite</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Bootstrap 4 card body tp hold info about x3d model -->
+            <div class="card-body">
+              <h4 class="card-title">Sprite X3D Model</h4>
+              <!-- Place x3D Model here -->
+              <x3d class="model3D">
+                <scene>
+                  <inline url="sprite.x3d"> </inline> 
+                </scene>
+              </x3d>
+            </div>
+          </div>
           <div id="main_3d_image">
             <x3d id="model3D">
               <scene>
-                <inline url="../models/sprite/export/sprite.x3d"> </inline> >
+                <inline url="sprite.x3d"> </inline> 
               </scene>
             </x3d>
           </div>
