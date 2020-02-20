@@ -194,11 +194,23 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: rgb(243, 182, 182);
+    
 }
+
+.card-header {
+    font-size: 16px;
+}
+
 .footer {
     color: #030303;
     background-color: #760003; /* Set navbar footer background color same as header */
     height: 52px 
+}
+
+.nav-link {
+    color: #212529;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 .navbar-text > a {
@@ -218,6 +230,36 @@ h1, h2, h3, h4, h5, h6 {
 
 .social {
     padding-top: 0px;
+}
+
+.btn-primary {
+    background-color: #760003;
+    border: grey;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: grey;
+    border-color: white; /*set the color you want here*/
+}
+
+.img-thumbnail {
+    padding: 0.25rem;
+    margin-top: 5px;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.model3D  {
+    background-color: rgba(255, 255, 255, 0.0); /* Adjust the transparency to bring the color forward */
+    border-radius: 5px;
+    border: 0px solid rgba(0, 0, 0, 1.0);
+    padding: 2px;
+    height: 310px;
 }
 
 
@@ -246,6 +288,7 @@ h1, h2, h3, h4, h5, h6 {
 .social {
     padding-top: 7px;
 } 
+
 
 
 }

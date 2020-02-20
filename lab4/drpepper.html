@@ -12,6 +12,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+    <!-- X3DOM Package -->
+    <link rel="stylesheet" type="text/css" href="css/x3dom.css"></link>
+    <link rel="stylesheet" type='text/javaScript' href="js/x3dom.js"></link>
+    <link rel='stylesheet' type='text/swj' href="swj/x3dom.swj"></link>
+    <script type='text/javaScript' src="http://x3dom.org/x3dom/release/x3dom.js"></script>
+    
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/42611a5285.js" crossorigin="anonymous"></script>
 
@@ -46,7 +52,7 @@
         <!-- Links -->
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
@@ -54,7 +60,7 @@
 
           <!-- Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
               Drinks
             </a>
             <div class="dropdown-menu">
@@ -69,25 +75,90 @@
           </ul>
       </div>
     </nav>
-    <br> <!-- Temporary Break -->
+
     <!-- Main Body -->
-    <div class="container main_contents">
-      <div class="row"> <!-- Main 3D image -->
-        <div class="col-sm-12">
-          <div id="main_3d_image">
-            <div id="main_text" class="col-xs-12 col-sm-4">
-              <h2>Coca Cola Great Britain</h2>
-              <h3>Founded by Dr John S Pemberton</h3>
-              <p>The Coca‑Cola Company is the world's leading manufacturer, marketer and distributor of
-                 non-alcoholic beverage concentrates and syrups, and produces nearly 400 brands. </p>
+    <div class="container-fluid main_contents">
+      <!-- Row to hold cards -->
+      <div class="row"> 
+        <!-- Column to hold x3d Model -->
+        <div class="col-sm-9">
+          <div class="card text-left">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link" href="sprite.html">Sprite</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="coke.html">Coca Cola</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="drpepper.html">Dr Pepper</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Bootstrap 4 card body tp hold info about x3d model -->
+            <div class="card-body">
+              <h4 class="card-title">Dr Pepper X3D Model</h4>
+              <!-- Place x3D Model here -->
+              <x3d class="model3D">
+                <scene>
+                  <inline url="sprite/export/sprite.x3d"> </inline> 
+                </scene>
+              </x3d>
+              <p class="card-text">This X3D model of the dr pepper bottle has been created in 3ds Max, 
+                exported to VRML97 and converted, using the instantreality transcoders, to X3D for display online.
+              </p>
+              <h5 class="card-subtitle">Camera Views</h5>
+              <div class="camera-btns">
+                <p class="card-text">These buttons select a range of X3D model viewpoints</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn-primary btn-responsive camera-font">Default View</a>
+                  <a href="#" class="btn btn-secondary btn-responsive camera-font">Side View</a>
+                  <a href="#" class="btn btn-outline-dark disabled btn-responsive camera-font">Disable</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Column to hold Image Gallery -->
+        <div class="col-sm-3">
+          <div class="card text-left">
+            <div class="card-header gallery-header">
+              Gallery
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">3D Image Gallery</h4>
+              <a href="coke.html">
+                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coca Cola">
+              </a>
+              <a href="sprite.html">
+                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
+              </a>
+              <a href="drpepper.html">
+                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
+              </a>
+              <p class="card-text">These 3D images of the Coke can, Sprite bottle and Dr Pepper cup are rendered in 3ds Max 2017 with Mental Ray</p>
             </div>
           </div>
         </div>
       </div>
-
-      <br>
-     
-    <br> <!-- Temporary Break -->
+      <!-- Row to hold 1 card to hold the description -->
+      <div class="row">
+        <!-- Column-->
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Dr Pepper</h3>
+              <p class="card-text">First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's leading lemon and lime flavoured soft drink and is sold in more than 190 different countries.
+                Sprite Zero, part of our no sugar Zero range, offers the delicious lemon lime taste of Sprite without the sugar or calories.
+              </p>
+              <a href="https://www.coca-cola.co.uk/drinks/drpepper" target="_blank" class="btn btn-primary">Find out more...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- End main_contents container-fluid -->
     <!-- Footer for 3dApp -->
     <nav class="navbar navbar-expand-sm footer navbar-fixed-bottom">
       <div class="container-fluid">
