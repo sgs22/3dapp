@@ -49,7 +49,8 @@
             <a class="nav-link active" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom"
+            title="About Web 3D Applications" data-content="3D Apps is a final year and postgraduate module">About</a>
           </li>
 
           <!-- Dropdown -->
@@ -65,7 +66,7 @@
             </div>
           </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
             </li>
           </ul>
       </div>
@@ -153,10 +154,32 @@
       </div>
     </nav>
 
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" style="display: none;" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">3D App Contact Details</h4>
+            <button type="button" class="close" data-dismuss="modal">x</button>
+          </div>
+          <!-- Modal Body -->
+          <div class="modal-body">
+            <p>Samuel Smith, Brighton, Email: sgs22@sussex.ac.uk</p>
+          </div>
+          <!-- Modal Footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/custom.js"></script>
   </body>
 </html>
