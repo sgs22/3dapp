@@ -19,6 +19,25 @@ $(document).ready(function() {
     xmlHttp.onreadystatechange = function() {
         if(xmlHttp.readyState == 4) {
             // Response handler code
+            //alert(xmlHttp.responseText); // for testing purposes
+            // Tokenise the response
+            response = xmlHttp.responseText.split("~");
+            // Start to write the HTML code into the htmlcoe string
+            htmlCode += '<tr>';
+            // Loop round the response array of tokens, which are the image names...
+            for(var i=0;i<response.length;i++) {
+                //continue to build html code for gallery
+                htmlCode += '<td id="gallery_cell">';
+                htmlCode += 'a href="' + 'images/' + response[i] + '">';
+                htmlCode += 'img src="images/' + response[i] + '" id="image_thumbnail"/>';
+                htmlCode += '</a>';
+                htmlCode += '</td>';
+                if(((i+1)%numberOfColumns) == 0) {
+                    htmlCode += '</tr><tr>';
+                }
+            }
+            htmlCode += '</tr>';
+            document.getElementById('gallery').innerHTML = htmlCode;
         }
     }
 });
