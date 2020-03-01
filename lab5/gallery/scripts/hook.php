@@ -8,7 +8,7 @@ $file_parts = array();
 // Response message
 $response = "";
 // Opens the directory to parse the images
-$dir_handle = opendir($dir_handle);
+$dir_handle = opendir($directory);
 // Iterate through files
 while($file = readdir($dir_handle)) {
     // First check for hidden files
