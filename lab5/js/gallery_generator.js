@@ -9,7 +9,7 @@ var htmlCode = "";
 var response;
 $(document).ready(function () {
 	// Set up the path to the PHP function that reads the image directory to find the thumbnail file names
-	var send = "scripts/hook.php";
+	var send = "scripts/php/hook.php";
 	// Open the connection to the web server
 	xmlHttp.open("GET", send, true);
 	// Tell the server that the client has no outgoing message, i.e. we are sending nothing to the server
@@ -20,19 +20,17 @@ $(document).ready(function () {
 			// Response handler code
 			//alert(xmlHttp.responseText);
 			response = xmlHttp.responseText.split("~");
-			htmlCode += '<tr>';
+			//Loop round the response array
 			for (var i = 0; i < response.length; i++) {
-				htmlCode += '<td id="gallery_cell">';
-				htmlCode += '<a href="' + 'images/' + response[i] + '">';
-				htmlCode += '<img src="images/' + response[i] + '" id="image_thumbnail"/>';
+				// Handeler to build the HTML string
+				//Use this to provide a link to the image
+				htmlCode += '<a href="assets/images/gallery_images' + response[i] + '">';
+				htmlCode += '<img class="card-img-top img-thumbnail" src="assets/images/gallery_images' + response[i] + '"/>';
 				htmlCode += '</a>';
-				htmlCode += '</td>';
-				if (((i + 1) % numberOfColumns) == 0) {
-					htmlCode += '</tr><tr>';
-				}
 			}
-			htmlCode += '</tr>';
-			document.getElementById('gallery').innerHTML = htmlCode;
+			document.getElementById('gallery_coke').innerHTML = htmlCode;
+			document.getElementById('gallery_sprite').innerHTML = htmlCode;
+			document.getElementById('gallery_drpepper').innerHTML = htmlCode;
 		}
 	}
 });
