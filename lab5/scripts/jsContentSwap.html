@@ -18,10 +18,16 @@
             document.getElementById(selected).style.display = 'block';
         }
         function changeLook() {
-            //Use this to chaneg the style dynamically
-            document.getElementById('theme').style.backgroundColor = '#770000';
-            document.getElementById('theme').style.fontFamily = 'ariel,sans-serif';
-            document.getElementById('theme').style.color = 'white';
+            //Use this to change the style dynamically
+            document.getElementById('body').style.backgroundColor = '#343a40';
+            document.getElementById('header').style.fontFamily = 'ariel,sans-serif';
+            document.getElementById('footer').style.color = '#212529';
+            document.getElementById('card').style.color = '#212529';
+        }
+        function changeBack() {
+            document.getElementById('body').style.backgroundColor = 'white';
+            document.getElementById('footer').style.backgroundColor = '#760003';
+            
         }
         function countUp() {
             //Simple incremental counter

@@ -281,17 +281,9 @@
               </div>
               <div class="card-body">
                 <h4 class="card-title">3D Image Gallery</h4>
-                <a href="javascript:swap('coke')">
-                  <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coca Cola">
-                </a>
-                <a href="javascript:swap('sprite')">
-                  <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
-                </a>
-                <a href="javascript:swap('drpepper')">
-                  <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
-                </a>
-                <p class="card-text">These 3D images of the Coke can, Sprite bottle and Dr Pepper cup are rendered in 3ds
-                  Max 2017 with Mental Ray</p>
+                <!-- Dynamically generated image gallery using JS and PHP -->
+                <div class="gallery" id="gallery_sprite"></div>
+                <p class="card-text">These 3D models are rendered in 3DS Max using Mental Ray</p>
               </div>
             </div>
           </div>
@@ -403,13 +395,16 @@
         </div>
       </div> <!-- End of Dr Pepper contents -->
     </div><!-- End 3D App SPA Contents -->
-    
-    <br> <!-- Temporary Break -->
     <!-- Footer for 3dApp -->
     <nav class="navbar navbar-expand-sm footer navbar-fixed-bottom">
       <div class="container-fluid">
         <div class="navbar-text float-left copyright">
-            <p><span class="align-baseline"></span>&copy 2020 Mobile Web 3D Applications</p>
+            <p>
+              <span class="align-baseline">&copy 2020 Web 3D | 
+                <a style="color: white; "href="javascript:changeLook()">Dark Mode</a> | 
+                <a style="color: white; "href="javaacript:changeBack()">Reset</a>
+              </span>
+            </p>
         </div>
         <div class="navbar-text float-right social">
           <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
