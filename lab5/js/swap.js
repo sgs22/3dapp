@@ -16,7 +16,7 @@ function changeLook() {
     document.getElementById('body').style.backgroundColor = '#343a40';
     document.getElementById('header').style.fontFamily = 'ariel,sans-serif';
     document.getElementById('footer').style.color = '#212529';
-    document.getElementById('card').style.color = '#212529';
+    document.getElementsById('card').style.color = '#212529';
 }
 function changeBack() {
     document.getElementById('body').style.backgroundColor = 'white';
