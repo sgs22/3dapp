@@ -24,7 +24,7 @@ $(document).ready(function() {
 				// Use this to provide a link to the image
 				htmlCode += '<a href="assets/images/gallery_images'+ response[i] +' ">';
 				htmlCode += '<img class="card-img-top img-thumbnail" src="assets/images/gallery_images' + response[i] + '"/>';
-				htmlCode += '</a>';			
+				htmlCode += '</a>';				
 			}
 			// Return the HTML string to each of the 3 3D App element blocks, coke, sprite and pepper galleries
 			document.getElementById('gallery_coke').innerHTML = htmlCode;
