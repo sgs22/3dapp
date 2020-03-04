@@ -14,8 +14,7 @@
 
     <!-- X3DOM Package -->
     <link rel="stylesheet" type="text/css" href="css/x3dom.css"></link>
-    <link rel="stylesheet" type='text/javaScript' href="js/x3dom.js"></link>
-    <link rel='stylesheet' type='text/swj' href="swj/x3dom.swj"></link>
+    <link rel="stylesheet" type='text/javaScript' href="scripts/js/x3dom.js"></link>
     <script type='text/javaScript' src="http://x3dom.org/x3dom/release/x3dom.js"></script>
 
     <!-- Font Awesome Kit -->
@@ -97,7 +96,7 @@
           <div class="col-sm-4">
             <div class="card">
               <a href="javascript:swap('coke')">
-                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coca Cola">
+                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/site_images/coca_cola.jpg" alt="Coca Cola">
               </a>
               <div class="card-body">
                 <h3 class="card-title">Coca Cola</h3>
@@ -116,7 +115,7 @@
           <div class="col-sm-4">
             <div class="card">
               <a href="javascript:swap('sprite')">
-                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
+                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/site_images/sprite.jpg" alt="Sprite">
               </a>
               <div class="card-body">
                 <h3 class="card-title">Sprite</h3>
@@ -134,7 +133,7 @@
           <div class="col-sm-4">
             <div class="card">
               <a href="javascript:swap('drpepper')">
-                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
+                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/site_images/dr_pepper.jpg" alt="Dr Pepper">
               </a>
               <div class="card-body">
                 <h3 class="card-title">Dr Pepper</h3>
@@ -150,7 +149,7 @@
         </div>
       </div>
       <!-- End Home page Contents-->
-
+      
       <!-- This is the content for coca cola -->
       <div class="main_contents" id="coke" style="display:none;">
         <!-- Row to hold cards -->
@@ -177,7 +176,7 @@
                 <!-- Place x3D Model here -->
                 <x3d class="model3D">
                   <scene>
-                    <inline url="sprite/export/sprite.x3d"> </inline>
+                    <inline url="assets/x3d/sprite.x3d"> </inline>
                   </scene>
                 </x3d>
                 <p class="card-text">This X3D model of the coke can has been created in 3ds Max,
@@ -255,7 +254,7 @@
                 <!-- Place x3D Model here -->
                 <x3d class="model3D">
                   <scene>
-                    <inline url="sprite/export/sprite.x3d"> </inline>
+                    <inline url="assets/x3d/sprite.x3d"> </inline>
                   </scene>
                 </x3d>
                 <p class="card-text">This X3D model of the sprite bottle has been created in 3ds Max,
@@ -334,7 +333,7 @@
                 <!-- Place x3D Model here -->
                 <x3d class="model3D">
                   <scene>
-                    <inline url="sprite/export/sprite.x3d"> </inline>
+                    <inline url="assets/x3d/sprite.x3d"> </inline>
                   </scene>
                 </x3d>
                 <p class="card-text">This X3D model of the dr pepper bottle has been created in 3ds Max,
@@ -361,13 +360,13 @@
               <div class="card-body">
                 <h4 class="card-title">3D Image Gallery</h4>
                 <a href="javascript:swap('coke')">
-                  <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coca Cola">
+                  <img class="card-img-top img-fluid img-thumbnail" src="assets/images/site_images/coca_cola.jpg" alt="Coca Cola">
                 </a>
                 <a href="javascript:swap('sprite')">
-                  <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
+                  <img class="card-img-top img-fluid img-thumbnail" src="assets/images/site_images/sprite.jpg" alt="Sprite">
                 </a>
                 <a href="javascript:swap('drpepper')">
-                  <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
+                  <img class="card-img-top img-fluid img-thumbnail" src="assets/images/site_images/dr_pepper.jpg" alt="Dr Pepper">
                 </a>
                 <p class="card-text">These 3D images of the Coke can, Sprite bottle and Dr Pepper cup are rendered in 3ds
                   Max 2017 with Mental Ray</p>
@@ -437,13 +436,13 @@
     </div>
 
     <!-- Custom JS for 3d app SPA -->
-    <script src="js/swap.js"></script>
+    <script src="scripts/js/swap.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="scripts/js/custom.js"></script>
   </body>
 </html>
