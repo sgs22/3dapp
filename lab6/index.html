@@ -359,15 +359,8 @@
               </div>
               <div class="card-body">
                 <h4 class="card-title">3D Image Gallery</h4>
-                <a href="javascript:swap('coke')">
-                  <img class="card-img-top img-fluid img-thumbnail" src="assets/images/site_images/coca_cola.jpg" alt="Coca Cola">
-                </a>
-                <a href="javascript:swap('sprite')">
-                  <img class="card-img-top img-fluid img-thumbnail" src="assets/images/site_images/sprite.jpg" alt="Sprite">
-                </a>
-                <a href="javascript:swap('drpepper')">
-                  <img class="card-img-top img-fluid img-thumbnail" src="assets/images/site_images/dr_pepper.jpg" alt="Dr Pepper">
-                </a>
+                <!-- Dynamically generated image gallery using JS and PHP -->
+                <div class="gallery" id="gallery_drpepper"></div>
                 <p class="card-text">These 3D images of the Coke can, Sprite bottle and Dr Pepper cup are rendered in 3ds
                   Max 2017 with Mental Ray</p>
               </div>
@@ -444,5 +437,8 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="scripts/js/custom.js"></script>
+
+    <!-- JavaScript and PHP based Gallery generator  -->
+    <script src="scripts/js/gallery_generator.js"></script>
   </body>
 </html>
