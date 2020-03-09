@@ -7,7 +7,7 @@ $(document).ready(function() {
 	// Temporarily stores server response while code is generated
 	var response;
 	// Set up a path variable to the PHP function that reads the image directory to find the thumbnail file names
-	var send = "cripts/php/hook.php";
+	var send = "php/hook.php";
 	// Open the connection to the web server
 	xmlHttp.open("GET", send, true);
 	// Tell the server that the client has no outgoing message, i.e. we are sending nothing to the server
@@ -16,7 +16,7 @@ $(document).ready(function() {
 	xmlHttp.onreadystatechange = function() {
 		if(xmlHttp.readyState == 4) {
 			// Response handler code
-			//alert(xmlHttp.responseText);
+			alert(xmlHttp.responseText);
 			response = xmlHttp.responseText.split("~");
 			// Loop round the response array
 			for (var i=0;i<response.length;i++) {

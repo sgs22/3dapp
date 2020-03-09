@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     //AJAX service request to get the main text data from the json data store
-    $.getJSON('./model/data/data.json', function(jsonObj) {
+    $.getJSON('model/data.json', function(jsonObj) {
         console.log(jsonObj);
         //Get the home page main text data
         $('#title_home').html('<h2>' + jsonObj.pageTextData[0].title + '</h2>');
