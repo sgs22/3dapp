@@ -14,7 +14,7 @@ function swap(selected) {
 function changeLook() {
     //Use this to change the style dynamically
     document.getElementById('body').style.backgroundColor = '#343a40';
-    //document.getElementById('header').style.fontFamily = 'ariel,sans-serif';
+    document.getElementById('header').style.fontFamily = 'ariel,sans-serif';
     document.getElementById('footer').style.color = '#212529';
     document.getElementsById('card').style.color = '#212529';
 }
