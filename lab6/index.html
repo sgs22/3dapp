@@ -52,22 +52,18 @@
         <!-- Links -->
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="javascript:swap('home')">Home</a>
+            <a id="navHome" class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom"
             title="About Web 3D Applications" data-content="3D Apps is a final year and postgraduate module">About</a>
           </li>
           <!-- Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-              Drinks
+          <li class="nav-item">
+            <a id="navModels" class="nav-link" href="#" id="navbardrop" data-toggle="popover" data-trigger="hover"
+            data-placement="bottom" title data-content="Three Models: Coke, Sprite and Dr Pepper" data-original-title="X3D Models">
+            Models
             </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="javascript:swap('coke')">Coca Cola</a>
-              <a class="dropdown-item" href="javascript:swap('sprite')">Sprite</a>
-              <a class="dropdown-item" href="javascript:swap('drpepper')">Dr Pepper</a>
-            </div>
           </li>
             <li class="nav-item">
               <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
@@ -78,7 +74,7 @@
     <!-- Main Body -->
     <div class="container-fluid"> 
       <!-- Home Page Content -->
-      <div class="container main_contents" id="home" style="display: none;">
+      <div class="container main_contents" id="home" style="display: block;">
         <div class="row">
           <div class="col-sm-12">
             <div id="main_3d_image">
