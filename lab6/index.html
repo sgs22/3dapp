@@ -33,7 +33,7 @@
     <nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
       <!-- Brand -->
       <div class="logo">
-        <a class="navbar-brand" href="javascript:swap('home')">
+        <a class="navbar-brand" href="index.html">
           <h1>1</h1>
           <h1>oca</h1>
           <h2>Cola</h2>
@@ -71,10 +71,10 @@
           </ul>
       </div>
     </nav>
-    <!-- Main Body -->
-    <div class="container-fluid"> 
+    <!-- Start of 3D App SPA Contents -->
+    <div class="container-fluid main_contents"> 
       <!-- Home Page Content -->
-      <div class="container main_contents" id="home" style="display: block;">
+      <div id="home" style="display: block;">
         <div class="row">
           <div class="col-sm-12">
             <div id="main_3d_image">
@@ -135,243 +135,218 @@
         </div>
       </div>
       <!-- End Home page Contents-->
-      
-      <!-- This is the content for coca cola -->
-      <div class="main_contents" id="coke" style="display:block;">
+      <!-- This is the 3D Models -->
+      <div id="models" style>
         <!-- Row to hold cards -->
         <div class="row">
           <!-- Column to hold x3d Model -->
-          <div class="col-sm-9">
+          <div class="col-sm-8">
             <div class="card text-left">
               <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                   <li class="nav-item">
-                    <a class="nav-link" href="javascript:swap('sprite')">Sprite</a>
+                    <a id="navSprite" class="nav-link active" href="#">Sprite</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="javascript:swap('coke')">Coca Cola</a>
+                    <a id="navCoke" class="nav-link" href="#">Coca Cola</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="javascript:swap('drpepper')">Dr Pepper</a>
+                    <a id="navPepper" class="nav-link" href="#">Dr Pepper</a>
                   </li>
                 </ul>
               </div>
               <!-- Bootstrap 4 card body tp hold info about x3d model -->
               <div class="card-body">
-                <h4 class="card-title">Coca Cola X3D Model</h4>
-                <!-- Place x3D Model here -->
-                <x3d class="model3D">
-                  <scene>
-                    <inline url="assets/x3d/sprite.x3d"> </inline>
-                  </scene>
-                </x3d>
-                <p class="card-text">This X3D model of the coke can has been created in 3ds Max,
-                  exported to VRML97 and converted, using the instantreality transcoders, to X3D for display online.
-                </p>
-                <h5 class="card-subtitle">Camera Views</h5>
-                <div class="camera-btns">
-                  <p class="card-text">These buttons select a range of X3D model viewpoints</p>
-                  <div class="btn-group">
-                    <a href="#" class="btn btn-primary btn-responsive camera-font">Default View</a>
-                    <a href="#" class="btn btn-secondary btn-responsive camera-font">Side View</a>
-                    <a href="#" class="btn btn-outline-dark disabled btn-responsive camera-font">Disable</a>
+                <!-- Sprite X3D Model -->
+                <div id="sprite">
+                  <div id="x3dModelTitle_sprite" class="card-title drinksText"></div>
+                  <!-- Place x3D Model here -->
+                  <div class="model3D">
+                    <x3d class="model3D">
+                      <scene>
+                        <inline url="assets/x3d/sprite.x3d"> </inline>
+                      </scene>
+                    </x3d>
                   </div>
+                  <div id="x3dCreationMethod_sprite" class="card-title drinksText"></div>
+                </div>
+                <!-- Coke X3D Model -->
+                <div id="coke" style="display: none;">
+                  <div id="x3dModelTitle_coke" class="card-title drinksText"></div>
+                  <!-- Place x3D Model here -->
+                  <div class="model3D">
+                    <x3d class="model3D">
+                      <scene>
+                        <inline url="assets/x3d/sprite.x3d"> </inline>
+                      </scene>
+                    </x3d>
+                  </div>
+                  <div id="x3dCreationMethod_coke" class="card-title drinksText"></div>
+                </div>
+                <div id="drpepper" style="display: none;">
+                  <div id="x3dModelTitle_pepper" class="card-title drinksText"></div>
+                  <!-- Place x3D Model here -->
+                  <div class="model3D">
+                    <x3d class="model3D">
+                      <scene>
+                        <inline url="assets/x3d/sprite.x3d"> </inline>
+                      </scene>
+                    </x3d>
+                  </div>
+                  <div id="x3dCreationMethod_pepper" class="card-title drinksText"></div>
                 </div>
               </div>
             </div>
           </div>
           <!-- Column to hold Image Gallery -->
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="card text-left">
               <div class="card-header gallery-header">
-                Gallery
-              </div>
-              <div class="card-body">
-                <h4 class="card-title">3D Image Gallery</h4>
-                <!-- Dynamically generated image gallery using JS and PHP -->
-                <div class="gallery" id="gallery_coke"></div>
-                <p class="card-text">These 3D models are rendered in 3DS Max using Mental Ray</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Row to hold 1 card to hold the description -->
-        <div class="row">
-          <!-- Column-->
-          <div class="col-sm-12">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Coca Cola</h3>
-                <p class="card-text">First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's
-                  leading lemon and lime flavoured soft drink and is sold in more than 190 different countries.
-                  Sprite Zero, part of our no sugar Zero range, offers the delicious lemon lime taste of Sprite without the
-                  sugar or calories.
-                </p>
-                <a href="https://www.coca-cola.co.uk/" target="_blank" class="btn btn-primary">Find out more...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> <!-- End of coke contents -->
-
-      <!-- This is the content for sprite -->
-      <div class="main_contents" id="sprite" style="display:none;">
-        <!-- Row to hold cards -->
-        <div class="row">
-          <!-- Column to hold x3d Model -->
-          <div class="col-sm-9">
-            <div class="card text-left">
-              <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                   <li class="nav-item">
-                    <a class="nav-link active" href="javascript:swap('sprite')">Sprite</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="javascript:swap('coke')">Coca Cola</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="javascript:swap('drpepper')">Dr Pepper</a>
+                    <a class="nav-link active" href="#">Gallery</a>
                   </li>
                 </ul>
               </div>
-              <!-- Bootstrap 4 card body tp hold info about x3d model -->
               <div class="card-body">
-                <h4 class="card-title">Sprite X3D Model</h4>
-                <!-- Place x3D Model here -->
-                <x3d class="model3D">
-                  <scene>
-                    <inline url="assets/x3d/sprite.x3d"> </inline>
-                  </scene>
-                </x3d>
-                <p class="card-text">This X3D model of the sprite bottle has been created in 3ds Max,
-                  exported to VRML97 and converted, using the instantreality transcoders, to X3D for display online.
-                </p>
-                <h5 class="card-subtitle">Camera Views</h5>
-                <div class="camera-btns">
-                  <p class="card-text">These buttons select a range of X3D model viewpoints</p>
-                  <div class="btn-group">
-                    <a href="#" class="btn btn-primary btn-responsive camera-font">Default View</a>
-                    <a href="#" class="btn btn-secondary btn-responsive camera-font">Side View</a>
-                    <a href="#" class="btn btn-outline-dark disabled btn-responsive camera-font">Disable</a>
-                  </div>
-                </div>
+                <div class="card-title title_gallery drinksText"></div>
+                <!-- PHP Genrated -->
+                <div class="gallery" id="gallery"></div>
+                <div class="card-text description_gallery drinksText"></div>
               </div>
             </div>
+            <!-- End of Gallery Card -->
           </div>
-          <!-- Column to hold Image Gallery -->
-          <div class="col-sm-3">
-            <div class="card text-left">
-              <div class="card-header gallery-header">
-                Gallery
-              </div>
-              <div class="card-body">
-                <h4 class="card-title">3D Image Gallery</h4>
-                <!-- Dynamically generated image gallery using JS and PHP -->
-                <div class="gallery" id="gallery_sprite"></div>
-                <p class="card-text">These 3D models are rendered in 3DS Max using Mental Ray</p>
-              </div>
-            </div>
+          <!-- End of Gallery column -->
+        </div>
+        <!-- Ends row x3d Model and Gallery -->
+      </div>
+      <!-- End x3d Models and Gallery -->  
+      <!-- Start Interaction Panels NEEDS TO BE DONE!!!-->
+    <div id="interaction" class="row" style>
+      <!-- Column for camera view controls -->
+      <div class="col-sm-4">
+        <div class="card text-left">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Camera Views</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="card-Title x3dCamera_Subtitle drinksText"></div>
+            <a href="#" class="btn btn-primary btn-responsive" onclick="cameraFront();">
+              Default View
+            </a>
+            <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraSide();">
+              Side View
+            </a> 
+            <a href="#" class="btn btn-outline-dark disabled btn-responsive">
+              Disable
+            </a>
+            <div class="card-text x3dCameraDescription drinksText"></div>
           </div>
         </div>
-        <!-- Row to hold 1 card to hold the description -->
-        <div class="row">
-          <!-- Column-->
-          <div class="col-sm-12">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Sprite</h3>
-                <p class="card-text">First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's
-                  leading lemon and lime flavoured soft drink and is sold in more than 190 different countries.
-                  Sprite Zero, part of our no sugar Zero range, offers the delicious lemon lime taste of Sprite without the
-                  sugar or calories.
-                </p>
-                <a href="https://www.coca-cola.co.uk/drinks/sprite" target="_blank" class="btn btn-primary">Find out
-                  more...</a>
-              </div>
-            </div>
+      </div>
+      <!-- Column for Animation controls -->
+      <div class="col-sm-4">
+        <div class="card text-left">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Animation</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="card-Title x3dAnimationSubtitle drinksText"></div>
+            <a href="#" class="btn btn-primary btn-responsive" onclick="spin();">
+              Rotate X axis
+            </a>
+            <a href="#" class="btn btn-secondary btn-responsive" onclick="spin();">
+              Rotate Y axis
+            </a> 
+            <a href="#" class="btn btn-outline-dark disabled btn-responsive">
+              Stop
+            </a>
+            <div class="card-text x3dAnimationDescription drinksText"></div>
           </div>
         </div>
-      </div> <!-- End of Sprite content -->
-
-      <!-- This is the content for dr pepper -->
-      <div class="main_contents" id="drpepper" style="display: none;">
-        <!-- Row to hold cards -->
-        <div class="row">
-          <!-- Column to hold x3d Model -->
-          <div class="col-sm-9">
-            <div class="card text-left">
-              <div class="card-header">
-                <ul class="nav nav-tabs card-header-tabs">
-                  <li class="nav-item">
-                    <a class="nav-link" href="javascript:swap('sprite')">Sprite</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="javascript:swap('coke')">Coca Cola</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="javascript:swap('drpepper')">Dr Pepper</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- Bootstrap 4 card body tp hold info about x3d model -->
-              <div class="card-body">
-                <h4 class="card-title">Dr Pepper X3D Model</h4>
-                <!-- Place x3D Model here -->
-                <x3d class="model3D">
-                  <scene>
-                    <inline url="assets/x3d/sprite.x3d"> </inline>
-                  </scene>
-                </x3d>
-                <p class="card-text">This X3D model of the dr pepper bottle has been created in 3ds Max,
-                  exported to VRML97 and converted, using the instantreality transcoders, to X3D for display online.
-                </p>
-                <h5 class="card-subtitle">Camera Views</h5>
-                <div class="camera-btns">
-                  <p class="card-text">These buttons select a range of X3D model viewpoints</p>
-                  <div class="btn-group">
-                    <a href="#" class="btn btn-primary btn-responsive camera-font">Default View</a>
-                    <a href="#" class="btn btn-secondary btn-responsive camera-font">Side View</a>
-                    <a href="#" class="btn btn-outline-dark disabled btn-responsive camera-font">Disable</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+      </div>
+      <!-- Column for Render controls -->
+      <div class="col-sm-4">
+        <div class="card text-left">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Render</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Lighting</a>
+              </li>
+            </ul>
           </div>
-          <!-- Column to hold Image Gallery -->
-          <div class="col-sm-3">
-            <div class="card text-left">
-              <div class="card-header gallery-header">
-                Gallery
-              </div>
-              <div class="card-body">
-                <h4 class="card-title">3D Image Gallery</h4>
-                <!-- Dynamically generated image gallery using JS and PHP -->
-                <div class="gallery" id="gallery_drpepper"></div>
-                <p class="card-text">These 3D models are rendered in 3DS Max using Mental Ray</p>
-              </div>
-            </div>
+          <div class="card-body">
+            <div class="card-Title x3dRenderSubtitle drinksText"></div>
+            <a href="#" class="btn btn-primary btn-responsive" onclick="">
+              Polygon
+            </a>
+            <a href="#" class="btn btn-secondary btn-responsive" onclick="wireframe();">
+              Wireframe
+            </a> 
+            <a href="#" class="btn btn-outline-dark disabled btn-responsive">
+              HeadLight
+            </a>
+            <div class="card-text x3dAnimationDescription drinksText"></div>
           </div>
         </div>
-        <!-- Row to hold 1 card to hold the description -->
-        <div class="row">
-          <!-- Column-->
-          <div class="col-sm-12">
-            <div class="card" id="card">
-              <div class="card-body">
-                <h3 class="card-title">Dr Pepper</h3>
-                <p class="card-text">First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's
-                  leading lemon and lime flavoured soft drink and is sold in more than 190 different countries.
-                  Sprite Zero, part of our no sugar Zero range, offers the delicious lemon lime taste of Sprite without the
-                  sugar or calories.
-                </p>
-                <a href="https://www.coca-cola.co.uk/drinks/drpepper" target="_blank" class="btn btn-primary">Find out
-                  more...</a>
-              </div>
-            </div>
+      </div>
+    </div> 
+    <!-- End Interaction Panel -->
+    <!-- Row to hold sprite description text -->
+    <div id="spriteDescription" class="row" style>
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div id="title_sprite" class="card-title drinksText"></div>
+            <div id="subTitle_sprite" class="card-subtitle drinksText"></div>
+            <div id="description_sprite" class="card-text drinksText"></div>
+            <a href="http://www.coca-cola.co.uk/drinks/sprite/sprite" class="btn btn-primary btn-responsive">Visit Sprite</a>
           </div>
         </div>
-      </div> <!-- End of Dr Pepper contents -->
-    </div><!-- End 3D App SPA Contents -->
+      </div>
+    </div>
+    <!-- End sprite Description contents -->
+    <!-- Row to hold coke description text -->
+    <div id="cokeDescription" class="row" style>
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div id="title_coke" class="card-title drinksText"></div>
+            <div id="subTitle_coke" class="card-subtitle drinksText"></div>
+            <div id="description_coke" class="card-text drinksText"></div>
+            <a href="http://www.coca-cola.co.uk/drinks/coca-cola/coca-cola" class="btn btn-primary btn-responsive">Visit Coke</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End coke Description contents -->
+    <!-- Row to hold drpepper description text -->
+    <div id="pepperDescription" class="row" style>
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div id="title_pepper" class="card-title drinksText"></div>
+            <div id="subTitle_pepper" class="card-subtitle drinksText"></div>
+            <div id="description_pepper" class="card-text drinksText"></div>
+            <a href="http://www.coca-cola.co.uk/drinks/drpepper" class="btn btn-primary btn-responsive">Visit Dr Pepper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End drpepper Description contents -->
+    </div> <!-- End 3D APP SPA CONTENTS -->
     <!-- Footer for 3dApp -->
     <nav class="navbar navbar-expand-sm footer navbar-fixed-bottom">
       <div class="container-fluid">
